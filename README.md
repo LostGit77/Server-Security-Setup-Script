@@ -2,7 +2,6 @@
 # 🛡️ Server Security & Setup Script
 
 [![Bash](https://img.shields.io/badge/Bash-Script-blue?style=flat-square&logo=gnu-bash)]()
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)]()
 [![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2FDebian-orange?style=flat-square&logo=ubuntu)]()
 
 Автоматизированный Bash-скрипт для комплексной настройки безопасности сервера, оптимизации сети и установки необходимого ПО.
