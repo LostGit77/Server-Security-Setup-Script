@@ -73,17 +73,17 @@
 
 ## 🔐 SSH настройки
 
-| Параметр | Значение |
-|----------|---------|
-| Порт | `2222` (по умолчанию) |
-| PermitRootLogin | `prohibit-password` |
-| PasswordAuthentication | `no` |
-| PermitEmptyPasswords | `no` |
-| PubkeyAuthentication | `yes` |
-| MaxAuthTries | `3` |
-| LoginGraceTime | `30` |
-| ClientAliveInterval | `300` |
-| ClientAliveCountMax | `2` |
+| Параметр | Значение | Описание |
+|----------|---------|----------|
+| Порт | `2222` (по умолчанию) | Порт, на котором работает SSH (нестандартный порт снижает количество атак) |
+| PermitRootLogin | `prohibit-password` | Запрещает вход под root по паролю, разрешает только по SSH-ключу |
+| PasswordAuthentication | `no` | Полностью отключает вход по паролю |
+| PermitEmptyPasswords | `no` | Запрещает вход с пустым паролем |
+| PubkeyAuthentication | `yes` | Разрешает аутентификацию по SSH-ключам |
+| MaxAuthTries | `3` | Максимальное количество попыток входа |
+| LoginGraceTime | `30` | Время (в секундах) на ввод данных перед отключением |
+| ClientAliveInterval | `300` | Интервал (в секундах) проверки активности клиента |
+| ClientAliveCountMax | `2` | Количество пропущенных проверок перед разрывом соединения |
 
 ---
 
