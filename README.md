@@ -64,6 +64,7 @@ sudo su -c "bash <(curl -Ls https://raw.githubusercontent.com/LostGit77/Server-S
 
 ---
 
+ ⚙️ Конфигурация
 # ⚙️ Конфигурация
 
 ## 🔐 SSH настройки
