@@ -51,8 +51,8 @@
 
 ---
 
-# 🚀 Установка
-
+# 🚀 Запуск
+Подключитесь к серверу (VDS/VPS) по SSH и выполните команду в терминале.
 ```
 sudo su -c "bash <(curl -Ls https://raw.githubusercontent.com/LostGit77/Server-Security-Setup-Script/refs/heads/main/server_security.sh)"  
 ```
