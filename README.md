@@ -53,15 +53,14 @@
 
 # 🚀 Установка
 
-## 📥 Шаги установки
-1. Скачивание скрипта  
-2. Запуск  
-3. Интерактивная настройка  
+```
+sudo su -c "bash <(curl -Ls https://raw.githubusercontent.com/LostGit77/Server-Security-Setup-Script/refs/heads/main/server_security.sh)"  
+```
 
-Скрипт будет задавать вопросы в процессе выполнения.  
-Отвечайте:  
-- `y` — yes  
-- `n` — no  
+> Скрипт будет задавать вопросы в процессе выполнения.  
+> Отвечайте:  
+> - `y` — yes  
+> - `n` — no  
 
 ---
 
