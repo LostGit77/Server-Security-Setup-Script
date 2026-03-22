@@ -878,20 +878,7 @@ check_warp_status() {
 ask_warp_install() {
     local reply=""
     while true; do
-        read -r -p "$(echo -e "${CLR_CYAN}Установить Cloudflare WARP? (y/n): ${CLR_RESET}")" reply </dev/tty
-        reply=$(echo "$reply" | tr 'A-Z' 'a-z')
-        case "$reply" in
-            y) return 0 ;;
-            n) return 1 ;;
-        esac
-        print_msg warn "Введите y или n"
-    done
-}
-
-ask_warp_proxy_mode() {
-    local reply=""
-    while true; do
-        read -r -p "$(echo -e "${CLR_CYAN}Использовать WARP как SOCKS-прокси для панели 3x-ui (или 'n' для VPN режима) (y/n): ${CLR_RESET}")" reply </dev/tty
+        read -r -p "$(echo -e "${CLR_CYAN}Установить Cloudflare WARP в режиме SOCKS-прокси? (y/n): ${CLR_RESET}")" reply </dev/tty
         reply=$(echo "$reply" | tr 'A-Z' 'a-z')
         case "$reply" in
             y) return 0 ;;
@@ -955,15 +942,6 @@ enable_warp_proxy() {
     echo
 }
 
-enable_warp_vpn() {
-    print_msg info "Подключаем WARP в VPN режиме..."
-    if ! warp-cli connect; then
-        print_msg error "Ошибка подключения WARP"
-        exit 1
-    fi
-    print_msg ok "WARP подключен"
-}
-
 show_warp_status() {
     print_msg info "Статус WARP (проверяем, установлен ли warp-cli Если: command not found значит не установлен):"
     warp-cli status
@@ -983,11 +961,7 @@ setup_warp() {
     install_warp_repo
     install_warp_package
     register_warp
-    if ask_warp_proxy_mode; then
-        enable_warp_proxy
-    else
-        enable_warp_vpn
-    fi
+    enable_warp_proxy
     show_warp_status
 }
 
